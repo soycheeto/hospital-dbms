@@ -54,6 +54,30 @@ The database schema consists of three tables:
 3. **users**: Stores information about users, including name and email.
 4. **appointments**: Stores information about appointments, including user ID, doctor ID, and date/time.
 
+
+### SQL Operations
+
+#### Table Creation
+The database schema is created with the following tables:
+- **Appointments**: Records appointments made by users with doctors.
+- **Users**: Stores information about users registering for appointments.
+- **Doctors**: Contains details about doctors, including their specialties and associated hospitals.
+- **Hospitals**: Stores information about hospitals, including their names and locations.
+
+#### Data Analysis
+1. **Total Appointments Count**: Count the total number of appointments in the database.
+2. **User Appointments Count**: Count the number of appointments for each user, listing their ID, name, and appointment count.
+3. **Doctor Appointments Count**: Count the number of appointments for each doctor, listing their ID, name, and appointment count.
+4. **Hospital Appointments Count**: Count the number of appointments for each hospital, listing their ID, name, and appointment count.
+5. **Busiest Time for Appointments**: Identify the busiest day/time for appointments.
+6. **Most Popular Specialty**: Determine the most popular medical specialty among doctors.
+
+#### Data Retrieval
+- **Appointments with User Details**: Retrieve appointments along with user details, including appointment ID, date and time, user name, and email.
+- **Appointments with Doctor Details**: Retrieve appointments along with doctor details, including appointment ID, date and time, doctor name, specialty, and hospital name.
+- **Doctors with Hospital Details**: Retrieve doctors along with hospital details, including doctor name, specialty, hospital name, and location.
+
+
 ## Contributors
 
 - Trisha Hansen D'Souza, K N Thushaar Rangan, Amogh P
