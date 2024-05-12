@@ -7,12 +7,20 @@ This repository contains code for a Hospital Appointment Booking System built us
 1. Clone this repository to your local machine.
 2. Navigate to the project directory in your terminal.
 3. Run `npm install` to install dependencies.
+4. Dependencies:
+    - body-parser
+    - ejs
+    - express
+    - sqlite3
 
 ## Configuration
 
 - This system uses SQLite3 as its database. The database file (`hospital.db`) is included in the project directory.
 - Ensure that Node.js is installed on your machine before running the application.
-
+- Within packages.json, add this line:
+    `"scripts": {
+      "start": "node index.js"
+    },`
 ## Usage
 
 1. Run the application by executing `node app.js` or `npm start` command in the terminal.
@@ -21,7 +29,7 @@ This repository contains code for a Hospital Appointment Booking System built us
 ## Features
 
 - **Registration**: Users can register by providing their name, email, and specialty.
-- **Doctor Search**: Users can search for doctors based on specialty.
+- **Doctor Search**: Users can search for doctors based on specialty and hospital.
 - **Appointment Booking**: Users can book appointments with available doctors.
 - **User Management**: User data is stored in the database for future appointments.
 
