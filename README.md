@@ -72,6 +72,18 @@ The database schema is created with the following tables:
 5. **Busiest Time for Appointments**: Identify the busiest day/time for appointments.
 6. **Most Popular Specialty**: Determine the most popular medical specialty among doctors.
 
+## Data Analysis Graphs
+
+### Graph 1: Appointment Volumes by Hospital Location
+![Appointment Volumes by Hospital Location](graph1.jpeg)
+
+**Description:** The bar chart shows appointment volumes varying greatly across hospital locations. Mumbai and New Delhi have the highest numbers, while Pune, Chennai, and Delhi have the lowest. This likely reflects differences in demand, accessibility, or service availability between locations.
+
+### Graph 2: Appointment Booking Trends Throughout the Day
+![Appointment Booking Trends Throughout the Day](graph2.jpeg)
+
+**Description:** The graph depicts two distinct peaks in appointment bookings. The smaller peak occurs around 3 pm, while the larger peak is at 10 pm. Appointment volumes remain relatively steady through the morning and early afternoon before increasing leading up to the 3 pm peak. Following this, there's a decline until the bigger nighttime peak at 10 pm. These trends may indicate user preferences or availability of doctors during specific hours of the day.
+
 ### Data Retrieval
 - **Appointments with User Details**: Retrieve appointments along with user details, including appointment ID, date and time, user name, and email.
 - **Appointments with Doctor Details**: Retrieve appointments along with doctor details, including appointment ID, date and time, doctor name, specialty, and hospital name.
