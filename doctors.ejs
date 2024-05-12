@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+    background-color: #6B6FD5;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 50px;
+    margin: 0;
+    color: #333;
+}
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1.text-center {
+            color: #333;
+            font-weight: 600;
+        }
+        .list-group-item {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-top: 15px;
+        }
+        label {
+            font-weight: 500;
+            color: #666;
+        }
+        input[type="datetime-local"] {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button.btn-primary {
+            background-color: #667eea;
+            border-color: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        button.btn-primary:hover {
+            background-color: #575fcf;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Doctors Available</h1>
+        <ul class="list-group">
+            <% doctors.forEach(function(doctor) { %>
+                <li class="list-group-item">
+                    <div><strong>Name:</strong> <%= doctor.name %></div>
+                    <div><strong>Specialty:</strong> <%= doctor.specialty %></div>
+                    <div><strong>Hospital:</strong> <%= doctor.hospital_name %></div>
+                    <form method="POST" action="/book">
+                        <input type="hidden" name="name" value="<%= name %>">
+                        <input type="hidden" name="email" value="<%= email %>">
+                        <input type="hidden" name="doctorId" value="<%= doctor.id %>">
+                        <div class="form-group">
+                            <label for="dateTime">Choose Appointment Date and Time:</label>
+                            <input type="datetime-local" id="dateTime" name="dateTime" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Book Appointment</button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
